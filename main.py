@@ -16,10 +16,10 @@ import telebot
 import mysql.connector
 
 mydb = mysql.connector.connect(
-      host=os.environ['HOST'],
-      database=os.environ['DATABASE'],
-      user=os.environ['USER'],
-      password=os.environ['PASS']
+      host=os.getenv['HOST'],
+      database=os.getenv['DATABASE'],
+      user=os.getenv['USER'],
+      password=os.getenv['PASS']
           )
 
 mycursor = mydb.cursor()
@@ -153,7 +153,7 @@ def start(bot, batch, id, mycursor, mydb):
     print('image sent')
 
 
-my_secret = os.environ['Token']
+my_secret = os.getenv['Token']
 
 bot = telebot.TeleBot(my_secret)
 
