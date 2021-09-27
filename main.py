@@ -1,6 +1,6 @@
 import os
 import pytz
-import keep_alive
+#import keep_alive
 from time import sleep
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
@@ -25,7 +25,7 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 
 
-keep_alive.keep_alive()
+#keep_alive.keep_alive()
 
 IST = pytz.timezone('Asia/Kolkata')
 
